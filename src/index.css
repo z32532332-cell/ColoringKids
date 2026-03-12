@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@theme {
+  /* Define custom font utilities */
+  --font-*: initial; /* optional: clear default font families if needed */
+  --font-kids: Fredoka, sans-serif;
+  --font-playful: "Baloo 2", cursive;
+}

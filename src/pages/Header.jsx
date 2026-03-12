@@ -47,7 +47,7 @@ const Header = () => {
               ))}
               <a
                 href="#"
-                className="bg-orange-400 text-white px-6 py-2 rounded-full text-sm lg:text-base font-bold hover:bg-orange-500 transition-colors shadow-md hover:shadow-lg ml-2"
+                className="group relative bg-orange-500 hover:bg-orange-400 text-white text-1xl font-black px-2 py-1 rounded-full shadow-[0_8px_0_rgb(194,65,12)] transition-all active:translate-y-1 active:shadow-none flex items-center gap-3 mx-auto md:mx-0"
               >
                 Start Free Trial
               </a>
@@ -57,7 +57,7 @@ const Header = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white hover:text-purple-600 focus:outline-none"
+                className="text-blue-800 hover:text-purple-600 focus:outline-none"
               >
                 {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
               </button> 
@@ -91,22 +91,23 @@ const Header = () => {
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-5">
-        <h1 className="text-5xl md:text-6xl font-bold text-purple-800 mb-4">
+        <h1 className="font-playful text-5xl md:text-6xl font-bold text-purple-800 mb-4">
           Let's Color the World!
         </h1>
-        <p className="text-xl md:text-2xl text-purple-700 max-w-2xl mb-8">
+        <p className="font-playful text-xl md:text-2xl text-purple-700 max-w-2xl mb-8">
           Discover thousands of printable coloring pages, digital art tools, and fun learning games for kids of all ages.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
             href="#"
-            className="bg-orange-400 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-orange-500 transition-colors shadow-lg"
+            className="group relative bg-orange-500 hover:bg-orange-400 text-white text-2xl font-black px-10 py-5 rounded-full shadow-[0_8px_0_rgb(194,65,12)] transition-all active:translate-y-1 active:shadow-none flex items-center gap-3 mx-auto md:mx-0"
           >
+            
             Start Coloring Now
           </a>
           <a
             href="#"
-            className="bg-white text-purple-700 px-8 py-3 rounded-full text-lg font-bold hover:bg-purple-100 transition-colors shadow-lg"
+            className="group relative bg-blue-700 hover:bg-blue-400 text-white text-2xl font-black px-21 py-5 rounded-full shadow-[0_8px_0_rgb(1,0,72)] transition-all active:translate-y-1 active:shadow-none flex items-center gap-3 mx-auto md:mx-0"
           >
             Learn More
           </a>
