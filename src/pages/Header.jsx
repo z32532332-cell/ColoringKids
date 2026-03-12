@@ -26,6 +26,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
+            {/*
             <div className="flex items-center">
               <span className="text-3xl font-bold">
                 <span className="text-red-500">Happy</span>{' '}
@@ -33,7 +34,14 @@ const Header = () => {
                 <span className="text-blue-500">Coloring</span>
               </span>
             </div>
-            
+            */}
+            <div className="flex items-center ml-15 mt-4">
+        <img 
+         src="/images/happy-color.png"        // put your logo in public folder
+       alt="Happy Kids Coloring"
+       className="h-30 w-40" // height fixed, width auto to maintain aspect ratio
+     />
+      </div>
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1 lg:space-x-4">
               {navItems.map((item) => (
@@ -54,7 +62,7 @@ const Header = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="md:hidden ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-blue-800 hover:text-purple-600 focus:outline-none"
@@ -66,7 +74,8 @@ const Header = () => {
         </div>
 
         {/* Mobile menu */}
-        <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:hidden  transition-all duration-300 ease-in-out transform${isOpen ? 'translate-y-0 opacity-100' 
+    : '-translate-y-2 opacity-0 pointer-events-none'}`}>
           <div className="px-2 pt-2 pb-4 space-y-2 bg-white bg-opacity-90 backdrop-blur-sm rounded-b-2xl shadow-inner">
             {navItems.map((item) => (
               <a
@@ -91,10 +100,10 @@ const Header = () => {
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-5">
-        <h1 className="font-playful text-5xl md:text-6xl font-bold text-purple-800 mb-4">
+        <h1 className="font-kids text-5xl md:text-6xl font-bold text-purple-800 mb-4">
           Let's Color the World!
         </h1>
-        <p className="font-playful text-xl md:text-2xl text-purple-700 max-w-2xl mb-8">
+        <p className="font-kids text-xl md:text-2xl text-purple-700 max-w-2xl mb-8">
           Discover thousands of printable coloring pages, digital art tools, and fun learning games for kids of all ages.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
